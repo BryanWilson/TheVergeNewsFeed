@@ -8,32 +8,68 @@
     <title>Title</title>
     <!--  W3S INCLUDE SCRIPT (>w3.includeHTML();)-->
     <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <!-- JQUERY CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="./scripts/jquery.fittext.js"></script>
-
     <!-- BOOT STRAP -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!--  TODO UPDATE BOOTSTRAP CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjsNaNcloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <!-- LINK TO CSS -->
     <link rel="stylesheet" type="text/css" href="styles.css">
-    
-    
+    <!-- JQUERY CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $.getJSON("https://newsapi.org/v1/articles?source=the-verge&sortBy=top&apiKey=938c99f8bd25454ab488d241db84b493", function(JsonData) {
+                $("#output").html(JsonData.source + " " + JsonData.articles[1].author);
+                console.log(JsonData);
+            });
+        });
+        //TODO: Find a JSON feed that works 
+
+        /*INSERT JAVASCRIPT AND JQUERY HERE*/
+
+        //        $.ajax({
+        //    type: "POST",
+        //    url:"http://ip.jsontest.com/",
+        //    data: "{}",
+        //    async: true,
+        //    dataType: "text",
+        //    success: function( data ) {
+        //
+        //        console.log(data);
+        //
+        //    }
+        //}); 
+
+        //    $(document).ready(function() {    
+        //
+        //  
+        //  var flickerAPI = "https://daringfireball.net/feeds/json";
+        //  $.getJSON( flickerAPI, function(TdfbJsonData) {
+        //
+        //            
+        //                $("p").html(TdfbJsonData.version);
+        //             
+        //
+        //          
+        //
+        //        }); 
+        //           });
+    </script>
+
+
 </head>
 
 <body>
-   
-   <div class="test">hahahahahhahahha</div>
+
+
     <div class="container-fluid">
 
-        <!--THE DARING FIREBALL JSON FEED : https://daringfireball.net/feeds/json-->
+        <p></p>
 
         <div class="row">
             <div class="col-sm-4">
                 <h1>Column 1</h1>
+                <div id="output"></div>
             </div>
             <div class="col-sm-4">
                 <h1>Column 2</h1>
@@ -47,10 +83,7 @@
     </div>
 
 
-    <script>
-        /*INSERT JAVASCRIPT AND JQUERY HERE*/
 
-    </script>
 </body>
 
 </html>
