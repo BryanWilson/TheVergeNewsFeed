@@ -10,52 +10,13 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <!-- BOOT STRAP -->
     <!--  TODO UPDATE BOOTSTRAP CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- LINK TO CSS -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <!-- JQUERY CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $.getJSON("https://newsapi.org/v1/articles?source=the-verge&sortBy=top&apiKey=938c99f8bd25454ab488d241db84b493", function(JsonData) {
-                $("#output").html(JsonData.source + " " + JsonData.articles[1].author);
-                console.log(JsonData);
-            });
-        });
-        //TODO: Find a JSON feed that works 
-
-        /*INSERT JAVASCRIPT AND JQUERY HERE*/
-
-        //        $.ajax({
-        //    type: "POST",
-        //    url:"http://ip.jsontest.com/",
-        //    data: "{}",
-        //    async: true,
-        //    dataType: "text",
-        //    success: function( data ) {
-        //
-        //        console.log(data);
-        //
-        //    }
-        //}); 
-
-        //    $(document).ready(function() {    
-        //
-        //  
-        //  var flickerAPI = "https://daringfireball.net/feeds/json";
-        //  $.getJSON( flickerAPI, function(TdfbJsonData) {
-        //
-        //            
-        //                $("p").html(TdfbJsonData.version);
-        //             
-        //
-        //          
-        //
-        //        }); 
-        //           });
-    </script>
-
+    <!-- LINK TO CSS EXTERNAL STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- LINK TO JAVASCRIPT AND JQUERY EXTERNAL STYLE SHEET   -->
+    <script src="scripts.js" type="text/javascript">myFunction();</script>
 
 </head>
 
